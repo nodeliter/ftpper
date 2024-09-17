@@ -1,5 +1,5 @@
 # Description
-node-ftpper is a wrapper for the popular nodejs FTP client module node-ftp and node-ftp-client.
+node-ftpper is a wrapper for the popular nodejs FTP client module node-ftp
 It tried to provide a more simple way to use FTP in nodejs
 
 
@@ -11,7 +11,6 @@ It tried to provide a more simple way to use FTP in nodejs
 # Dependencies
 
 node-ftp
-node-ftp-client
 
 # Installation
 
@@ -44,9 +43,9 @@ where `configs` is an array of the ftp server configuration:
 # Examples
 
 ```javascript
-ftps.upload(['test/**'], '/remote_site/test/', results=>{
+ftps.uploadDir('local_site/', '/remote_site/test/', results=>{
 	console.log("ftp uploaded");
 });
-ftps.chmod('755', '/remote_site/test/test_file');
+ftps.chmod(['file1','file2','file3'], 755);
 ```
 
